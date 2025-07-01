@@ -1,11 +1,9 @@
-- name: University of Washington 
-  description: >-
-    Ph. D in Computer Science, advised by <a href="https://smseitz.com">Steven M. Seitz</a> and
-    <a href="https://homes.cs.washington.edu/~ali/">Ali Farhadi</a>.<br />
-    Supported by Samsung Scholarship 2015-2020 ($50,000/year for 5 years)
-  dates: Fall 2015 - Spring 2022
-
 - name: University of Illinois at Urbana-Champaign
   description: >-
-    B.S. in Computer Science, advised by <a href="https://dhoiem.cs.illinois.edu/">Derek Hoiem</a>.
-  dates: Fall 2009 - Spring 2013
+    B.S. in ECE + B.S. Atmospheric Sciences (two degrees completed simultaneously), advised by <a href="https://ece.illinois.edu/about/directory/faculty/erhan">Erhan Kudeki</a> and
+    <a href="https://www.nutrien.com/news/stories/meet-eric-snodgrass-nutriens-weather-wizard">Eric Snodgrass</a>.<br />
+  dates: Fall 2013 - Spring 2018
+
+- name: Stanford University
+  description: >-
+    EPGY scholar, advised by <a href="https://dhoiem.cs.illinois.edu/">Paul Simeon</a>.

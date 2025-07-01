@@ -69,3 +69,7 @@ docs/_build/
 
 # PyBuilder
 target/
+
+# IDE and editor files
+.history/
+.vscode/
