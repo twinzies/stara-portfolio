@@ -4,9 +4,13 @@ This template is borrowed from Keun Hong.
 
 To run locally: 
   gem install bundler jekyll
+  
   bundle install
+  
   bundle exec jekyll serve
+  
   Open http://localhost:4000 on a browser
+  
   
 - Make sure to update all relevant fields in `_config.yml` and `_data`.
 
