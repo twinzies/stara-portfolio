@@ -1,0 +1,21 @@
+- id: sample-post-1
+  title: "Getting Started with NLP and Transformers"
+  date: "July 2025"
+  description: "A comprehensive guide to understanding and implementing transformer models for natural language processing tasks."
+  url: "https://your-blog.com/nlp-transformers-guide"
+  tags:
+    - "NLP"
+    - "Transformers"
+    - "Tutorial"
+  type: "Tutorial"
+
+- id: crossentropy-thoughts
+  title: "Notes and discussions on Cross Entropy"
+  date: "June 2025"
+  description: "Step-by-step tutorial on creating AI-powered applications using Python and popular machine learning libraries."
+  url: "https://your-blog.com/ai-python-tutorial"
+  tags:
+    - "Python"
+    - "AI"
+    - "Tutorial"
+  type: "Article"

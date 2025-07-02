@@ -38,7 +38,29 @@ layout: null
 
 <body>
 
-  <section class="hero">
+  <!-- Navigation Bar -->
+  <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#projects">
+          Projects
+        </a>
+        <a class="navbar-item" href="#posts">
+          Posts / Tutorials
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero" id="top">
     <div class="hero-body container is-max-desktop">
       <div class="columns">
 
@@ -131,7 +153,7 @@ layout: null
     </div>
   </section>
 
-  <!-- Divider between Highlights and Publications -->
+  <!-- Divider between Highlights and Prior -->
   <div class="hr">
     <div class="container">
       <hr>
@@ -140,7 +162,7 @@ layout: null
 
   <section class="section">
     <div class="container is-max-desktop">
-      <h2 class="title is-3">Prior</h2>
+      <h2 class="title is-3" id="projects">Prior</h2>
 
       {% for publication in site.data.publications %}
       <div class="publication-block columns">
@@ -216,6 +238,53 @@ layout: null
         </div>
       </div>
       {% endfor %}
+    </div>
+  </section>
+
+  <!-- Divider between Prior and Posts -->
+  <div class="hr">
+    <div class="container">
+      <hr>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3" id="posts">Posts / Tutorials</h2>
+      
+      <div class="columns is-multiline">
+        {% for post in site.data.posts %}
+        <div class="column is-6">
+          <div class="card post-card">
+            <div class="card-content">
+              <div class="media">
+                <div class="media-content">
+                  <p class="title is-5 post-title">
+                    <a href="{{ post.url }}" target="_blank" rel="noopener">{{ post.title }}</a>
+                  </p>
+                  <p class="subtitle is-6 post-meta">
+                    <span class="post-type">{{ post.type }}</span>
+                    {% if post.date %}
+                    <span class="post-date"> • {{ post.date }}</span>
+                    {% endif %}
+                  </p>
+                </div>
+              </div>
+              <div class="content post-description">
+                {{ post.description }}
+                {% if post.tags %}
+                <div class="tags post-tags">
+                  {% for tag in post.tags %}
+                  <span class="tag is-small">{{ tag }}</span>
+                  {% endfor %}
+                </div>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
     </div>
   </section>
 
