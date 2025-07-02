@@ -55,16 +55,17 @@ layout: null
           <div class="content has-text-justified">
             {{ site.description | markdownify }}
             <div class="buttons">
-              <a class="external-link button is-light" href="cv.html">
-                <span class="icon"><i class="fas fa-file"></i></span>
-                <span>CV</span>
+              <a class="external-link button is-light" href="https://linkedin.com/in/{{ site.linkedin_username }}">
+                <span class="icon"><i class="fab fa-linkedin"></i></span>
+                <span>LinkedIn</span>
               </a>
-
+              <!--
               <a class="external-link button is-light"
                 href="https://scholar.google.com/citations?user={{ site.google_scholar }}">
                 <span class="icon"><i class="ai ai-google-scholar"></i></span>
                 <span>Scholar</span>
               </a>
+              -->
 
               <a class="external-link button is-light" href="https://github.com/{{ site.github_username }}">
                 <span class="icon"><i class="fab fa-github"></i></span>
@@ -94,7 +95,7 @@ layout: null
   <section class="section">
     <div class="container is-max-desktop">
 
-      <h2 class="title is-3">Highlights</h2>
+      <h2 class="title is-3">Recent / Highlights</h2>
       <div class="columns is-multiline">
         {% for highlight in site.data.highlights %}
         <div class="column is-4">
@@ -139,7 +140,7 @@ layout: null
 
   <section class="section">
     <div class="container is-max-desktop">
-      <h2 class="title is-3">Publications</h2>
+      <h2 class="title is-3">Prior</h2>
 
       {% for publication in site.data.publications %}
       <div class="publication-block columns">
@@ -223,12 +224,15 @@ layout: null
         <a class="external-link" href="https://scholar.google.com/citations?user={{ site.google_scholar }}">
           <i class="ai ai-google-scholar"></i>
         </a>
+        <a class="external-link" href="https://linkedin.com/in/{{ site.linkedin_username }}">
+          <i class="fab fa-linkedin"></i>
+        </a>
       </div>
       <div class="columns is-centered has-text-centered">
         <div class="column is-8">
           <div class="content">
             <p>
-              Feel free to <a href="https://github.com/keunhong/keunhong.github.io">borrow this template</a>.
+              Feel free to <a href="mailto:{{ site.email }}">send me an email</a> to chat about AI!
             </p>
           </div>
         </div>
