@@ -21,9 +21,9 @@
 #     - "Computer Vision"
 
 - id: google-loon-2019
-  title: "Modeling Winds for GoogleX Loon"
+  title: "Modeling Winds for Loon"
   organization: "GoogleX"
-  description: "Developing a bespoke model to predict wind patterns for Project Loon to enable high-altitude balloon navigation."
+  description: "Modeling patterns in wind data for Project Loon to enable high-altitude balloon navigation."
   url: "https://x.company/collection/loon/"
   image: "loon.png"
   video: "loon.mp4"
