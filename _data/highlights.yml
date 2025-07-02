@@ -7,15 +7,27 @@
   image: "world-labs.jpg"
   video: "worldlabs-dec2.mp4"
 
-- id: google-3d-shopping-may2025
-  title: "Generating 3D Products"
-  organization: "Google Research"
-  date: "May 2025"
-  description: "Transform a few photos into interactive 3D shopping experiences using generative AI."
-  url: "https://research.google/blog/bringing-3d-shoppable-products-online-with-generative-ai/"
-  image: "google-3d-shopping.jpg"
-  video: "google-3d-products.mp4"
+# - id: google-3d-shopping-may2025
+#   title: "Generating 3D Products"
+#   organization: "Google Research"
+#   date: "May 2025"
+#   description: "Transform a few photos into interactive 3D shopping experiences using generative AI."
+#   url: "https://research.google/blog/bringing-3d-shoppable-products-online-with-generative-ai/"
+#   image: "google-3d-shopping.jpg"
+#   video: "loon.mov"
+#   tags:
+#     - "Generative AI"
+#     - "3D Reconstruction"
+#     - "Computer Vision"
+
+- id: google-loon-2019
+  title: "Modeling Winds for GoogleX Loon"
+  organization: "GoogleX"
+  description: "Developing a bespoke model to predict wind patterns for Project Loon to enable high-altitude balloon navigation."
+  url: "https://x.company/collection/loon/"
+  image: "loon.png"
+  video: "loon.mp4"
   tags:
-    - "Generative AI"
-    - "3D Reconstruction"
-    - "Computer Vision"
+    - "Statistical Modeling"
+    - "Dynamical Systems"
+  #  - "Computer Vision"

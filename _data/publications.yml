@@ -1,3 +1,29 @@
+
+- id: mesosphericna
+  title: "Mesospheric Na Variability and Dependence on Geomagnetic and Solar Activity"
+  venue: Presented at American Geophysical Union, USA
+  description: "Data on the Na concentrations was collected at the Arecibo Observatory using a sophisticated resonance lidar system to investigate seasonal and periodic variations."
+  project_page: https://ui.adsabs.harvard.edu/abs/2017AGUFMSA11A2247J/abstract
+  paper_url: https://agu.confex.com/agu/fm17/meetingapp.cgi/Paper/220704
+  image: lidar.jpg
+  authors:
+    - tkjain
+    - cbrum
+    - sraizada
+
+- id: hfarecibo
+  title: "High-Frequency Experiments in the E region"
+  venue: Presented at American Geophysical Union, USA
+  description: "This project used radar data observed at the Arecibo Observatory to model how powerful radio signals can change the ionosphere, the data revealed new insights into the ionosphere and its behavior."
+  project_page: https://ui.adsabs.harvard.edu/abs/2017AGUFMSM23B2611N/abstract
+  paper_url: https://agu.confex.com/agu/fm17/meetingapp.cgi/Paper/209671
+  image: me_arecibo.png
+  authors:
+      - enossa
+      - tkjain
+      - mpsulzer
+      - pperillat
+
 - id: illuminerf
   title: "IllumiNeRF 3D Relighting without Inverse Rendering"
   venue: NeurIPS, 2024
