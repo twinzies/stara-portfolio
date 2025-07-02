@@ -25,19 +25,17 @@ email: tkjain1 [dot] sheffield [dot] ac [dot] uk
 description: |
   I am a Computer Scientist specialized in AI. 
 
-  I was previously working in hardware (and then, software) as an engineer at [Google](https://ai.google/research/) where I built technology for products on Google Cloud, Pixel devices and Project Loon (GoogleX).
+  Previously, I worked at Google in Mountain View, California in consumer hardware and then, in Cloud as an engineer. I have built technology for various Pixel devices, GCP and Project Loon [(GoogleX)](https://x.company/).
 
-  I received my B.S. in Electrical and Computer Engineering with a simultaneously completed B.S. in Atmospheric Sciences degree at the University of Illinois at Urbana-Champaign in 2018 where I was advised by
-  [Erhan Kudeki](https://ece.illinois.edu/about/directory/faculty/erhan) and
-  [Eric Snodgrass](https://www.nutrien.com/news/stories/meet-eric-snodgrass-nutriens-weather-wizard).
+  I received two bachelor’s degrees simultaneously - B.S. in Electrical and Computer Engineering and B.S. in Atmospheric Sciences both at the [University of Illinois at Urbana-Champaign](https://ece.illinois.edu/) where I was advised by [Erhan Kudeki](https://ece.illinois.edu/about/directory/faculty/erhan) and [Eric Snodgrass](https://www.nutrien.com/news/stories/meet-eric-snodgrass-nutriens-weather-wizard).
 
-  I am currently a master's student with research interests in NLP at the University of Sheffield, UK, where I am advised by [Diana Maynard](https://www.sheffield.ac.uk/cs/people/research-staff/diana-maynard).
+  I am currently a master's student with research interests in Machine Learning and AI (focused on NLP) at the University of Sheffield, UK.
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://keunhong.com" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: twinzies
 linkedin_username: girlenginerd
-# google_scholar: HVZb-5oAAAAJ
+google_scholar: yBNW7-EAAAAJ
 # google_analytics: G-MFWSBLRKG0
 
 # Build settings
