@@ -1,21 +1,32 @@
-- id: sample-post-1
-  title: "Getting Started with NLP and Transformers"
-  date: "July 2025"
-  description: "A comprehensive guide to understanding and implementing transformer models for natural language processing tasks."
-  url: "https://your-blog.com/nlp-transformers-guide"
+- id: customizing-gpt4
+  title: "Alternative Customization Methodologies for Proprietary or Closed-source Conversational LLMs"
+  date: "January 2024"
+  description: "GPT models (such as GPT 3.5 onwards) don't always permit fine-tuning or adaptations with LoRA. However, system customization instructions are supported and can be used to make powerful prototypes. A demonstration is linked."
+  url: "https://chatgpt.com/g/g-677ec607c8d08191a903be6534c9fc10-asktara"
+  tags:
+    - "Chatbot"
+    - "Transformers"
+    - "LLM"
+  type: "Demo"
+
+- id: nlp-classification-tut
+  title: "Getting Started with NLP - Topic classification from scratch"
+  date: "March 2025"
+  description: "A comprehensive tutorial on developing topic classification models for NLP, featuring neural network implementations from scratch in NumPy to illustrate feedforward and backpropagation algorithms, as well as demonstrations using industry-standard packages such as PyTorch."
+  url: "https://github.com/twinzies/topic-classifier"
   tags:
     - "NLP"
-    - "Transformers"
+    - "Neural Networks"
     - "Tutorial"
   type: "Tutorial"
 
-- id: crossentropy-thoughts
-  title: "Notes and discussions on Cross Entropy"
-  date: "June 2025"
-  description: "Step-by-step tutorial on creating AI-powered applications using Python and popular machine learning libraries."
-  url: "https://your-blog.com/ai-python-tutorial"
-  tags:
-    - "Python"
-    - "AI"
-    - "Tutorial"
-  type: "Article"
+# - id: crossentropy-thoughts
+#   title: "Notes and discussions on Cross Entropy"
+#   date: "June 2025"
+#   description: "Step-by-step tutorial on creating AI-powered applications using Python and popular machine learning libraries."
+#   url: "https://your-blog.com/ai-python-tutorial"
+#   tags:
+#     - "Python"
+#     - "AI"
+#     - "Tutorial"
+#   type: "Article"

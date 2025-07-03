@@ -1,3 +1,4 @@
+# TODO
 - id: multilinguality # The paramount job - need not mention the company
   title: "Cultural selection bias inherent in LLM pretraining"
   description: "Worked as an engineer on the Google Cloud team, contributing to core technical infrastructure. Played a key role in shipping features that improved performance and quality for millions of users worldwide."
@@ -10,9 +11,10 @@
     - Protobuf, gRPC
   year: 2023, 2024
 
+# TODO
 - id: compuvision # The paramount job - need not mention the company
   title: "Computer Vision in Manufacturing Pipelines"
-  description: "Worked as an engineer on the Google Cloud team, contributing to core technical infrastructure. Played a key role in shipping features that improved performance and quality for millions of users worldwide."
+  description: "Worked on a novel project to use computer vision in manufacturing pipelines."
   project_page: https://store.google.com/product/pixel_8
   image: pixel_phone.png
   technologies:
@@ -23,11 +25,12 @@
   year: 2023, 2024
 
 - id: gcp
-  title: "Technical infrastructure for Billing and 'Bare Metal' Subscriptions"
-  venue: Google (Full time engineer)
-  description: "Worked as an engineer on the Google Cloud team, contributing to core technical infrastructure. Played a key role in shipping features that improved performance and quality for millions of users worldwide."
-  project_page: https://store.google.com/product/pixel_8
-  image: pixel_phone.png
+  title: "Technical infrastructure for Billing customers at scale with GCP"
+  venue: Google
+  description: "A robust subscription management system for GCP services built with gRPC/Protobuf architecture. This project included integrations with external vendors to fulfill custom cloud infrastructure requirements for enterprise clients, providing scalable billing solutions that significantly enhanced internal service reliability improving the customer experience."
+  project_page: https://cloud.google.com/compute/docs/instances/bare-metal-instances
+  image: GCP_billing.png
+  # Change image to be excerpts from this video: https://www.youtube.com/watch?v=Ad49t21gTfw
   technologies:
     - Android
     - Python
@@ -37,8 +40,8 @@
 
 - id: pixelphone
   title: "Pixel Phones"
-  venue: Google (Full time engineer)
-  description: "Worked as an engineer on the Google Pixel team, contributing to core hardware and software development. Played a key role in shipping features that improved performance and quality for millions of users worldwide."
+  venue: Google
+  description: "Worked as an engineer on the Pixel team, contributing to core hardware and software development. Played a key role in shipping features that improved performance and quality for millions of users worldwide."
   project_page: https://store.google.com/product/pixel_8
   image: pixel_phone.png
   technologies:
@@ -50,8 +53,8 @@
 
 - id: pixelbuds
   title: "Pixel Buds"
-  venue: Google (Full time engineer)
-  description: "Worked as an engineer on the Google Pixel team, contributing to core hardware and software development. Played a key role in shipping features that improved performance and quality for millions of users worldwide."
+  venue: Google
+  description: "Worked as an engineer on the Pixel team, contributing to core hardware and software development. Played a key role in shipping features that improved performance and quality for millions of users worldwide."
   project_page: https://store.google.com/category/earbuds
   image: pixel_phone.png
   technologies:
@@ -64,7 +67,7 @@
 - id: mesosphericna
   title: "Mesospheric Na Variability and Dependence on Geomagnetic and Solar Activity"
   venue: Presented at American Geophysical Union, USA
-  description: "Data on the Na concentrations was collected at the Arecibo Observatory using a sophisticated resonance lidar system to investigate seasonal and aperiodic variation."
+  description: "This research presented at the American Geophysical Union utilized advanced resonance lidar systems at the Arecibo Observatory to analyze mesospheric sodium (Na) variability and its correlation with geomagnetic and solar activity. The data and models provided significant insights into seasonal and aperiodic variations in atmospheric composition."
   project_page: https://ui.adsabs.harvard.edu/abs/2017AGUFMSA11A2247J/abstract
   paper_url: https://agu.confex.com/agu/fm17/meetingapp.cgi/Paper/220704
   image: lidar.jpg
@@ -73,10 +76,10 @@
     - cbrum
     - sraizada
   awards:
-    - "Indira Saladi Award for Research Excellence"
+    - "Indira Saladi Award for Outstanding Achievement as Youngest Principal Investigator at the Arecibo Observatory"
 
 - id: hfarecibo
-  title: "High-Frequency Experiments in the E region"
+  title: "High-Frequency data collection and analysis of the E region of the Ionosphere with the world's most powerful radar at Arecibo Observatory"
   venue: Presented at American Geophysical Union, USA
   description: "This project used radar data observed at the Arecibo Observatory to model how powerful radio signals can change the ionosphere, the research revealed new insights into the ionosphere and its behavior."
   project_page: https://ui.adsabs.harvard.edu/abs/2017AGUFMSM23B2611N/abstract
@@ -89,18 +92,18 @@
       - pperillat
   awards:
     - "Max Hammond Grant for Outstanding Research in the Space Sciences"
-- id: landsdao
-  title: "nSqft and Polkadot"
-  venue: Corpus Christi College, University of Cambridge, UK
-  description: "Worked as an engineer on the Google Cloud team, contributing to core technical infrastructure. Played a key role in shipping features that improved performance and quality for millions of users worldwide."
-  project_page: https://store.google.com/product/pixel_8
-  image: pixel_phone.png
-  technologies:
-    - Android
-    - Python
-    - Golang
-    - Protobuf, gRPC
-  year: 2023
+# - id: landsdao
+#   title: "nSqft and Polkadot"
+#   venue: Corpus Christi College, University of Cambridge, UK
+#   description: "Worked as an engineer on the Google Cloud team, contributing to core technical infrastructure. Played a key role in shipping features that improved performance and quality for millions of users worldwide."
+#   project_page: https://store.google.com/product/pixel_8
+#   image: pixel_phone.png
+#   technologies:
+#     - Android
+#     - Python
+#     - Golang
+#     - Protobuf, gRPC
+#   year: 2023
   # - id: illuminerf
   #   title: "IllumiNeRF 3D Relighting without Inverse Rendering"
   #   venue: NeurIPS, 2024
