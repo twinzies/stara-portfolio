@@ -1,35 +1,33 @@
 # TODO
 - id: multilinguality # The paramount job - need not mention the company
-  title: 'How much do linguistic and cultural biases of the training data influence the "values" or default priors of a language model.'
-  description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-  project_page: https://store.google.com/product/pixel_8
-  image: multicultural.png
-  image_mouseover: multicultural_mouseover.png
+  title: "Linguistic and Cultural Bias Analysis in Large Language Models"
+  venue: "University of Sheffield, UK"
+  description: 'This project explores how linguistic and cultural biases present in training corpora shape transformer-based LLMs default "values" during inference. By examining the influence of pre-training biases, we investigate how models might reflect or reinforce cultural norms without deliberate intent. The study illuminates hidden priors embedded in language models and their implications for fair representation and multicultural inclusivity in AI systems.'
+  project_page:
+  image: devnagri2.png
+  image_mouseover: devnagrivid.mp4
   technologies:
     - Python
     - Transformers
     - NLP
     - Text Processing
   year: 2025
+  authors:
+    - tkjain
 
-# TODO
 - id: compuvision # The paramount job - need not mention the company
-  title: "Computer Vision in Manufacturing Pipelines"
-  description: "Worked on a novel project to use computer vision in manufacturing pipelines."
-  project_page: https://store.google.com/product/pixel_8
-  # image: phone.png
-  # image_mouseover: phone.mp4
-  technologies:
-    - Android
-    - Python
-    - Golang
-    - Protobuf, gRPC
+  title: "Automating defect detection for cable manufacturing with Deep Learning"
+  description: "Designed and trained novel convolutional neural networks (CNNs) using PyTorch for object detection and defect classification in cables. Focused on model accuracy, real-time inference, and error detection. Applied deep learning to automate visual inspection and improve quality control."
+  project_page: 
+  image: compuvision.png
+  image_mouseover: compuvision.mp4
   year: 2023, 2024
 
 - id: gcp
-  title: "Technical infrastructure for Billing large enterprise customers at scale with GCP"
+  title: "Technical infrastructure for billing enterprise Cloud customers at scale as part of GCP"
   venue: Google
-  description: "A robust subscription management system for GCP services built with gRPC/Protobuf architecture. This project included integrations with external vendors to fulfill custom cloud infrastructure requirements for enterprise clients, providing scalable billing solutions that significantly enhanced internal service reliability improving the customer experience."
+  description: "A robust subscription management system for GCP services built with a gRPC/Protobuf based architecture. This project included integrations with external vendors to fulfill custom cloud infrastructure requirements for enterprise clients, providing scalable billing solutions that significantly enhanced internal service reliability improving the customer experience."
+  image: cloud.png
   project_page: https://cloud.google.com/compute/docs/instances/bare-metal-instances
   launch_video: https://www.youtube.com/watch?v=Ad49t21gTfw
   technologies:
@@ -74,7 +72,8 @@
   description: "This research presented at the American Geophysical Union utilized advanced resonance lidar systems at the Arecibo Observatory to analyze mesospheric sodium (Na) variability and its correlation with geomagnetic and solar activity. The data and models provided significant insights into seasonal and aperiodic variations in atmospheric composition."
   project_page: https://ui.adsabs.harvard.edu/abs/2017AGUFMSA11A2247J/abstract
   paper_url: https://agu.confex.com/agu/fm17/meetingapp.cgi/Paper/220704
-  image: lidar.jpg
+  image: me_arecibo.png
+  image_mouseover: lidar.mp4
   authors:
     - tkjain
     - cbrum
@@ -89,7 +88,8 @@
   description: "This project used radar data observed at the Arecibo Observatory to model how powerful radio signals can change the ionosphere, the research revealed new insights into the ionosphere and its behavior."
   project_page: https://ui.adsabs.harvard.edu/abs/2017AGUFMSM23B2611N/abstract
   paper_url: https://agu.confex.com/agu/fm17/meetingapp.cgi/Paper/209671
-  image: me_arecibo.png
+  image: arecibo2.png
+  image_mouseover: arecibo.mp4
   authors:
       - enossa
       - tkjain

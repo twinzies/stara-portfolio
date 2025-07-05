@@ -1,11 +1,10 @@
-- id: world-labs-dec2024
-  title: "Generating Worlds"
-  organization: "World Labs"
-  date: "December 2024"
-  description: "Transform a single image into an explorable 3D world using generative AI."
-  url: "https://www.worldlabs.ai/blog"
-  image: "world-labs.jpg"
-  video: "worldlabs-dec2.mp4"
+- id: diss
+  title: "Ensuring social wellbeing by design in conversational LLM agents."
+  organization: "University of Sheffield"
+  date: "September 2025"
+  description: "This system analyzes conversation patterns to identify when users of AI assistants may be experiencing emotional distress. It connects users with others facing similar challenges and relevant support resources, helping reduce isolation during difficult times. The approach prioritizes privacy protection while facilitating human connection."
+  image: "diss.png"
+#  video: "worldlabs-dec2.mp4"
 
 # - id: google-3d-shopping-may2025
 #   title: "Generating 3D Products"
