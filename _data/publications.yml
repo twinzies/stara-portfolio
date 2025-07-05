@@ -1,22 +1,24 @@
 # TODO
 - id: multilinguality # The paramount job - need not mention the company
-  title: "Cultural selection bias inherent in LLM pretraining"
-  description: "Worked as an engineer on the Google Cloud team, contributing to core technical infrastructure. Played a key role in shipping features that improved performance and quality for millions of users worldwide."
+  title: 'How much do linguistic and cultural biases of the training data influence the "values" or default priors of a language model.'
+  description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
   project_page: https://store.google.com/product/pixel_8
-  image: pixel_phone.png
+  image: multicultural.png
+  image_mouseover: multicultural_mouseover.png
   technologies:
-    - Android
     - Python
-    - Golang
-    - Protobuf, gRPC
-  year: 2023, 2024
+    - Transformers
+    - NLP
+    - Text Processing
+  year: 2025
 
 # TODO
 - id: compuvision # The paramount job - need not mention the company
   title: "Computer Vision in Manufacturing Pipelines"
   description: "Worked on a novel project to use computer vision in manufacturing pipelines."
   project_page: https://store.google.com/product/pixel_8
-  image: pixel_phone.png
+  # image: phone.png
+  # image_mouseover: phone.mp4
   technologies:
     - Android
     - Python
@@ -25,12 +27,11 @@
   year: 2023, 2024
 
 - id: gcp
-  title: "Technical infrastructure for Billing customers at scale with GCP"
+  title: "Technical infrastructure for Billing large enterprise customers at scale with GCP"
   venue: Google
   description: "A robust subscription management system for GCP services built with gRPC/Protobuf architecture. This project included integrations with external vendors to fulfill custom cloud infrastructure requirements for enterprise clients, providing scalable billing solutions that significantly enhanced internal service reliability improving the customer experience."
   project_page: https://cloud.google.com/compute/docs/instances/bare-metal-instances
-  image: GCP_billing.png
-  # Change image to be excerpts from this video: https://www.youtube.com/watch?v=Ad49t21gTfw
+  launch_video: https://www.youtube.com/watch?v=Ad49t21gTfw
   technologies:
     - Android
     - Python
@@ -39,11 +40,12 @@
   year: 2021, 2022
 
 - id: pixelphone
-  title: "Pixel Phones"
+  title: "eVNA API Development & Data-Driven Optimizations as part of the Pixel Phones Team"
   venue: Google
-  description: "Worked as an engineer on the Pixel team, contributing to core hardware and software development. Played a key role in shipping features that improved performance and quality for millions of users worldwide."
+  description: "The work on the Pixel Phones team involved design and implementation of a novel 'eVNA' API in collaboration with industry partners such as STMicroelectronics and National Instruments. Analysis of RF data informed the design optimizations and development, ultimately enhancing connectivity and user experience for millions of Pixel phone users worldwide. The API has been included in all Pixel phones produced since its introduction."
   project_page: https://store.google.com/product/pixel_8
-  image: pixel_phone.png
+  image: phone.jpeg
+  launch_video: https://www.youtube.com/watch?v=your-video-id
   technologies:
     - Android
     - Python
@@ -52,20 +54,22 @@
   year: 2018, 2019, 2021
 
 - id: pixelbuds
-  title: "Pixel Buds"
+  title: "Calibration Algorithms & Manufacturing Data Analytics as part of Pixel buds"
   venue: Google
-  description: "Worked as an engineer on the Pixel team, contributing to core hardware and software development. Played a key role in shipping features that improved performance and quality for millions of users worldwide."
-  project_page: https://store.google.com/category/earbuds
-  image: pixel_phone.png
+  description: "The Pixel Buds project required implementation of complex calibration algorithms for critical RF technologies such as Bluetooth, where code must ensure performance and compliance with standards that vary by country and region. Analyzing large-scale manufacturing datasets proved crucial for improving product quality throughout the development cycle, while creating automated data analysis pipelines and visualizations to streamline manufacturing processes represents a core part of Google's systematic engineering approach."
+  project_page: https://www.soundguys.com/google-pixel-buds-a-series-review-54174/
+  launch_video: https://www.youtube.com/watch?v=your-video-id
+  image: buds.png
+  image_mouseover: buds.mp4
   technologies:
-    - Android
     - Python
-    - RF algorithms
-    - Hardware-software co-design
+    - Algorithms
+    - Data Analysis
+    - Radio Frequency (RF)
   year: 2018, 2019, 2021
 
 - id: mesosphericna
-  title: "Mesospheric Na Variability and Dependence on Geomagnetic and Solar Activity"
+  title: "Deep atmospheric analysis of Mesospheric Na Variability and its dependence on Geomagnetic and Solar Activity"
   venue: Presented at American Geophysical Union, USA
   description: "This research presented at the American Geophysical Union utilized advanced resonance lidar systems at the Arecibo Observatory to analyze mesospheric sodium (Na) variability and its correlation with geomagnetic and solar activity. The data and models provided significant insights into seasonal and aperiodic variations in atmospheric composition."
   project_page: https://ui.adsabs.harvard.edu/abs/2017AGUFMSA11A2247J/abstract
@@ -76,7 +80,8 @@
     - cbrum
     - sraizada
   awards:
-    - "Indira Saladi Award for Outstanding Achievement as Youngest Principal Investigator at the Arecibo Observatory"
+    - "Indira Saladi Award for Outstanding Achievement."
+    - "Youngest Principal Investigator at the Arecibo Observatory"
 
 - id: hfarecibo
   title: "High-Frequency data collection and analysis of the E region of the Ionosphere with the world's most powerful radar at Arecibo Observatory"

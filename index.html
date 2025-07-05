@@ -212,6 +212,12 @@ layout: null
                 <span class="icon"><i class="fas fa-globe-asia"></i></span>
                 <span>Project Page</span>
               </a>
+              {% if publication.launch_video %}
+              <a class="external-link button is-small is-ghost" href="{{ publication.launch_video }}" target="_blank" rel="noopener">
+                <span class="icon"><i class="fas fa-play"></i></span>
+                <span>Launch Video</span>
+              </a>
+              {% endif %}
               {% if publication.paper_url %}
               <a class="external-link button is-small is-ghost" href="{{ publication.paper_url }}">
                 <span class="icon"><i class="fas fa-file-pdf"></i></span>
