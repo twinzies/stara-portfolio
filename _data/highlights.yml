@@ -1,10 +1,10 @@
 - id: diss
-  title: "Ensuring social wellbeing by design in conversational LLM agents."
+  survey_url: "https://forms.gle/vKUj8oRHgGdVaDfs9"
+  title: "Ensuring social wellbeing by design in conversational LLM agents. [Active]"
   organization: "University of Sheffield"
   date: "September 2025"
-  description: "This system analyzes conversation patterns to identify when users of AI assistants may be experiencing emotional distress. It connects users with others facing similar challenges and relevant support resources, helping reduce isolation during difficult times. The approach prioritizes privacy protection while facilitating human connection."
+  description: "This study analyzes conversation patterns to identify when users of AI assistants may be experiencing emotional distress and proposes a system to handle such cases. The approach prioritizes privacy and protection while facilitating human connection."
   image: "diss.png"
-#  video: "worldlabs-dec2.mp4"
 
 # - id: google-3d-shopping-may2025
 #   title: "Generating 3D Products"
@@ -22,7 +22,7 @@
 - id: google-loon-2019
   title: "Modeling Winds for Loon"
   organization: "GoogleX"
-  description: "Modeling patterns in wind data for Project Loon to enable high-altitude balloon navigation."
+  description: "I led the facilitation of experiments at a one-of-a-kind radar field in Peru to improve ECMWF forecasts for stratospheric winds - modeling patterns in the data for Project Loon to enable high-altitude balloon navigation and recovery."
   url: "https://x.company/collection/loon/"
   image: "loon.png"
   video: "loon.mp4"

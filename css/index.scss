@@ -243,6 +243,19 @@
                 color: rgb(229, 75, 24);
             }
         }
+        
+        &.image-of-day-btn {
+            color: #666;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            padding: 0.5rem 1rem;
+            margin-left: 1rem;
+            
+            &:hover {
+                background-color: transparent;
+                color: rgb(229, 75, 24);
+            }
+        }
     }
     
     // Ensure navbar is always visible on desktop
@@ -256,4 +269,154 @@
 // Smooth scrolling
 html {
     scroll-behavior: smooth;
+}
+
+// Image of the Day modal styles
+#imageOfDayModal {
+    .modal-content {
+        max-width: 90vw;
+        max-height: 90vh;
+        margin: auto;
+        
+        .box {
+            padding: 2rem;
+            border-radius: 8px;
+            
+            .title {
+                text-align: center;
+                color: #333;
+                margin-bottom: 1.5rem;
+            }
+            
+            .image {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 1rem;
+                
+                img {
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+            
+            p {
+                font-style: italic;
+                color: #666;
+                font-size: 1.1rem;
+            }
+        }
+    }
+    
+    .modal-close {
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
+        
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+    }
+}
+
+// Mobile responsiveness for image of day modal
+@media screen and (max-width: 768px) {
+    #imageOfDayModal {
+        .modal-content .box {
+            padding: 1rem;
+            margin: 1rem;
+            
+            .title {
+                font-size: 1.5rem;
+            }
+            
+            p {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+// Highlight card styles
+.highlight-card {
+    height: 100%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-bottom: 1.5rem;
+    
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-content {
+        padding: 1.5rem;
+    }
+
+    .highlight-title {
+        margin-bottom: 1rem !important;
+        
+        a {
+            color: #000;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            
+            &:hover {
+                color: rgb(229, 75, 24);
+                text-decoration: none;
+            }
+        }
+    }
+
+    .highlight-description {
+        color: #333;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+    }
+
+    .highlight-actions {
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid #f0f0f0;
+        
+        .button {
+            background-color: #3273dc;
+            border-color: #3273dc;
+            color: white;
+            transition: all 0.3s ease;
+            
+            &:hover {
+                background-color: #2366d1;
+                border-color: #2366d1;
+                transform: translateY(-1px);
+            }
+        }
+    }
+
+    .highlight-actions-top {
+        margin-top: 0.75rem;
+        margin-bottom: 0;
+        padding-top: 0;
+        border-top: none;
+        
+        .button {
+            background-color: #3273dc;
+            border-color: #3273dc;
+            color: white;
+            transition: all 0.3s ease;
+            font-size: 0.75rem;
+            
+            &:hover {
+                background-color: #2366d1;
+                border-color: #2366d1;
+                transform: translateY(-1px);
+            }
+        }
+    }
+
+    .highlight-media {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
 }

@@ -59,6 +59,9 @@ layout: null
         <a class="navbar-item" href="#posts">
           Posts / Tutorials
         </a>
+        <a class="navbar-item image-of-day-btn" href="#" onclick="showImageOfDay(); return false;">
+          Image of the Day
+        </a>
       </div>
     </div>
   </nav>
@@ -143,6 +146,16 @@ layout: null
                   <p class="title is-5 highlight-title">
                     <a href="{{ highlight.url }}" target="_blank" rel="noopener">{{ highlight.title }}</a>
                   </p>
+                  {% if highlight.survey_url %}
+                  <div class="highlight-actions highlight-actions-top">
+                    <a href="{{ highlight.survey_url }}" target="_blank" rel="noopener" class="button is-primary is-small">
+                      <span class="icon">
+                        <i class="fas fa-poll"></i>
+                      </span>
+                      <span>Take Survey</span>
+                    </a>
+                  </div>
+                  {% endif %}
                 </div>
               </div>
               <div class="content highlight-description">
