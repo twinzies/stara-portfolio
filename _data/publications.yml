@@ -1,5 +1,5 @@
 # TODO
-- id: multilinguality # The paramount job - need not mention the company
+- id: multilinguality
   title: "Linguistic and Cultural Bias Analysis in Large Language Models"
   venue: "University of Sheffield, UK"
   description: 'This project explores how linguistic and cultural biases present in training corpora shape transformer-based LLMs default "values" during inference. By examining the influence of pre-training biases, we investigate how models might reflect or reinforce cultural norms without deliberate intent. The study illuminates hidden priors embedded in language models and their implications for fair representation and multicultural inclusivity in AI systems.'
@@ -40,10 +40,10 @@
 - id: pixelphone
   title: "eVNA API Development & Data-Driven Optimizations as part of the Pixel Phones Team"
   venue: Google
-  description: "The work on the Pixel Phones team involved design and implementation of a novel 'eVNA' API in collaboration with industry partners such as STMicroelectronics and National Instruments. Analysis of RF data informed the design optimizations and development, ultimately enhancing connectivity and user experience for millions of Pixel phone users worldwide. The API has been included in all Pixel phones produced since its introduction."
+  description: "The work on the Pixel Phones team involved design and implementation of a novel 'eVNA' API in collaboration with industry partners such as STMicroelectronics and National Instruments. Analysis of data informed design optimizations and product development, ultimately enhancing connectivity and user experience for millions of Pixel phone users worldwide. The API has been included in all Pixel phones produced since its inception."
   project_page: https://store.google.com/product/pixel_8
   image: phone.jpeg
-  launch_video: https://www.youtube.com/watch?v=your-video-id
+  launch_video: https://www.youtube.com/watch?v=4dJ89x4SVxk
   technologies:
     - Android
     - Python
@@ -54,9 +54,9 @@
 - id: pixelbuds
   title: "Calibration Algorithms & Manufacturing Data Analytics as part of Pixel buds"
   venue: Google
-  description: "The Pixel Buds project required implementation of complex calibration algorithms for critical RF technologies such as Bluetooth, where code must ensure performance and compliance with standards that vary by country and region. Analyzing large-scale manufacturing datasets proved crucial for improving product quality throughout the development cycle, while creating automated data analysis pipelines and visualizations to streamline manufacturing processes represents a core part of Google's systematic engineering approach."
+  description: "The Pixel Buds project required implementation of complex calibration algorithms for critical technologies such as Bluetooth, where code must ensure performance and compliance with requirements that vary by country and region. Analyzing large-scale datasets proved crucial for improving product quality throughout its development."
   project_page: https://www.soundguys.com/google-pixel-buds-a-series-review-54174/
-  launch_video: https://www.youtube.com/watch?v=your-video-id
+  launch_video: https://www.youtube.com/watch?v=I6r4y17bV8g&list=PLnKtcw5mIGUSovjTwkvQh31Z-9PkUL5Ly&index=3
   image: buds.png
   image_mouseover: buds.mp4
   technologies:
