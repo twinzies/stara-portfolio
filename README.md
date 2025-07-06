@@ -1,6 +1,6 @@
 # twinzies.github.io
 
-This template is borrowed from Keun Hong.
+This template builds on the minimalistic template provided by Keun Hong.
 
 To run locally: 
   gem install bundler jekyll
