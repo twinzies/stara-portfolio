@@ -197,7 +197,13 @@ layout: null
 
         <div class="column">
           <div class="content">
-            <h3 class="publication-title"><a href="{{ publication.project_page }}">{{ publication.title }}</a></h3>
+            <h3 class="publication-title">
+              {% if publication.project_page %}
+              <a href="{{ publication.project_page }}">{{ publication.title }}</a>
+              {% else %}
+              {{ publication.title }}
+              {% endif %}
+            </h3>
             <div class="publication-authors">
               {% for author_id in publication.authors %}
               {% assign author = site.data.authors[author_id] %}
@@ -221,10 +227,12 @@ layout: null
             <p class="publication-description">{{ publication.description }}</p>
             <!-- Publication Links. -->
             <div class="publication-links buttons field has-addons">
+              {% if publication.project_page %}
               <a class="external-link button is-small is-ghost" href="{{ publication.project_page }}">
                 <span class="icon"><i class="fas fa-globe-asia"></i></span>
                 <span>Project Page</span>
               </a>
+              {% endif %}
               {% if publication.launch_video %}
               <a class="external-link button is-small is-ghost" href="{{ publication.launch_video }}" target="_blank" rel="noopener">
                 <span class="icon"><i class="fas fa-play"></i></span>
