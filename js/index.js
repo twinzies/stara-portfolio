@@ -69,6 +69,9 @@ function showImageOfDay() {
                              onload="console.log('Image loaded successfully')"
                              onerror="console.error('Failed to load image:', this.src); this.style.display='none'; this.parentNode.innerHTML='<p>Image not found</p>';">
                     </figure>
+                    <p class="has-text-centered mt-3" style="font-style: italic; font-size: 0.875rem; color: #666;">
+                        © Tara K. Jain 2025. All rights reserved. Use for AI/ML training prohibited.
+                    </p>
                 </div>
             </div>
             <button class="modal-close is-large" onclick="closeImageOfDay()"></button>
