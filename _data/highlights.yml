@@ -1,7 +1,7 @@
 - id: diss
 #  survey_url: "https://forms.gle/vKUj8oRHgGdVaDfs9"
   title: "Ensuring social wellbeing by design in conversational LLM agents. [Active]"
-  organization: "University of Sheffield"
+  organization: "Masters in AI [in-progress]"
   date: "September 2025"
   description: "This study analyzes conversation patterns to identify when users of AI assistants may be experiencing emotional distress and proposes a system to handle such cases. The approach prioritizes privacy and protection while facilitating human connection."
   image: "diss.png"

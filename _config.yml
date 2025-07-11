@@ -29,7 +29,7 @@ description: |
 
   I was awarded two bachelor’s degrees simultaneously - B.S. in Electrical and Computer Engineering and B.S. in Atmospheric Sciences both at the [University of Illinois at Urbana-Champaign](https://ece.illinois.edu/) where I was advised by [Erhan Kudeki](https://ece.illinois.edu/about/directory/faculty/erhan) and [Eric Snodgrass](https://www.nutrien.com/news/stories/meet-eric-snodgrass-nutriens-weather-wizard).
 
-  I am currently pursuing a master's in Machine Learning and AI at the University of Sheffield, UK.
+  I am currently pursuing a master's in AI with a focus on NLP + RLHF in the UK.
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.tarakj.com" # the base hostname & protocol for your site, e.g. http://example.com

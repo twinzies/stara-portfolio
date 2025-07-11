@@ -1,7 +1,6 @@
 # TODO
 - id: multilinguality
   title: "Linguistic and Cultural Bias Analysis in Large Language Models"
-  venue: "University of Sheffield, UK"
   description: 'This project explores how linguistic and cultural biases present in training corpora shape transformer-based LLMs default "values" during inference. By examining the influence of pre-training biases, we investigate how models might reflect or reinforce cultural norms without deliberate intent. The study illuminates hidden priors embedded in language models and their implications for fair representation and multicultural inclusivity in AI systems.'
   image: devnagri2.png
   image_mouseover: devnagrivid.mp4
