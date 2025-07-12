@@ -2,7 +2,7 @@
   title: "Alternative Customization Methodologies for Proprietary or Closed-source Conversational LLMs"
   date: "January 2024"
   description: "GPT models (such as GPT 3.5 onwards) don't always permit fine-tuning or adaptations with LoRA. However, system customization instructions are supported and can be used to make powerful prototypes. A demonstration is linked."
-  url: "https://chatgpt.com/g/g-677ec607c8d08191a903be6534c9fc10-asktara"
+  url: "https://chatgpt.com/g/g-SMvngnFso-icarl"
   tags:
     - "Chatbot"
     - "Transformers"
