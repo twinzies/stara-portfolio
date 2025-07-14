@@ -20,6 +20,9 @@ $(document).ready(function() {
         $('.navbar-burger').removeClass('is-active');
         $('.navbar-menu').removeClass('is-active');
     });
+
+    // Initialize theme on page load
+    initializeTheme();
 })
 
 // Image of the Day functionality
@@ -69,6 +72,9 @@ function showImageOfDay() {
                              onload="console.log('Image loaded successfully')"
                              onerror="console.error('Failed to load image:', this.src); this.style.display='none'; this.parentNode.innerHTML='<p>Image not found</p>';">
                     </figure>
+                    <p class="has-text-centered mt-3" style="font-style: italic; font-size: 0.875rem; color: var(--text-muted);">
+                        © Tara K. Jain 2025. All rights reserved. Use for AI/ML training prohibited.
+                    </p>
                 </div>
             </div>
             <button class="modal-close is-large" onclick="closeImageOfDay()"></button>
@@ -85,3 +91,48 @@ function closeImageOfDay() {
         modal.remove();
     }
 }
+
+// Theme toggle functionality
+function initializeTheme() {
+    // Check if user has a saved theme preference
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    // Use saved theme, or default to system preference
+    const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+    
+    // Apply the theme
+    applyTheme(theme);
+}
+
+function toggleTheme() {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    
+    applyTheme(newTheme);
+    localStorage.setItem('theme', newTheme);
+}
+
+function applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    
+    // Update the theme toggle icon
+    const themeIcon = document.getElementById('theme-icon');
+    if (themeIcon) {
+        themeIcon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+    }
+    
+    // Update toggle button title
+    const toggleButton = document.querySelector('.theme-toggle');
+    if (toggleButton) {
+        toggleButton.title = `Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`;
+    }
+}
+
+// Listen for system theme changes
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+    // Only update if user hasn't manually set a preference
+    if (!localStorage.getItem('theme')) {
+        applyTheme(e.matches ? 'dark' : 'light');
+    }
+});

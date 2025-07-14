@@ -1,6 +1,116 @@
 ---
 ---
 
+/* CSS Variables for Light and Dark Themes */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --text-muted: #555555;
+    --card-bg: #ffffff;
+    --border-color: #e0e0e0;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --button-bg: #f5f5f5;
+    --button-text: #000000;
+    --link-color: #000000;
+    --accent-color: #e54b18;
+}
+
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --text-color: #ffffff;
+    --text-muted: #aaaaaa;
+    --card-bg: #2d2d2d;
+    --border-color: #404040;
+    --shadow-color: rgba(255, 255, 255, 0.1);
+    --button-bg: #1a1a1a;
+    --button-text: #ffffff;
+    --link-color: #ffffff;
+    --accent-color: #ff6b3d;
+}
+
+/* Apply theme variables */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Navigation theme */
+.navbar {
+    background-color: var(--bg-color) !important;
+    backdrop-filter: none;
+    transition: background-color 0.3s ease;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.navbar-item {
+    color: var(--text-color) !important;
+    transition: color 0.3s ease;
+}
+
+.navbar-item:hover {
+    background-color: var(--button-bg) !important;
+    color: var(--text-color) !important;
+}
+
+/* Theme toggle button */
+.theme-toggle {
+    padding: 0.5rem 0.75rem !important;
+}
+
+.theme-toggle .icon {
+    font-size: 1.2rem;
+}
+
+/* Card and content themes */
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 4px var(--shadow-color);
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Section backgrounds */
+.section {
+    background-color: var(--bg-color);
+    transition: background-color 0.3s ease;
+}
+
+.hero {
+    background-color: var(--bg-color);
+    transition: background-color 0.3s ease;
+}
+
+/* Button themes */
+.button {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border-color: var(--border-color);
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+/* Link themes */
+a {
+    color: var(--link-color);
+    transition: color 0.3s ease;
+}
+
+/* Text color overrides */
+.has-text-grey {
+    color: var(--text-muted) !important;
+}
+
 .title {
     font-family: 'Google Sans';
     font-weight: 700;
@@ -12,7 +122,8 @@
 
 .footer .footer-links a {
     font-size: 25px;
-    color: #000;
+    color: var(--text-color);
+    transition: color 0.3s ease;
 }
 
 .publication-block {
@@ -22,13 +133,17 @@
         font-weight: 600;
         font-size: 110% !important;
 
-        a { color: #000 }
+        a { 
+            color: var(--text-color);
+            transition: color 0.3s ease;
+        }
     }
 
     .publication-venue {
-        color: #555;
+        color: var(--text-muted);
         width: fit-content;
         margin-top: 0;
+        transition: color 0.3s ease;
     }
 
     .publication-venue-emph {
@@ -40,19 +155,22 @@
     }
 
     .publication-awards {
-        color: firebrick;
+        color: var(--accent-color);
         width: fit-content;
         font-weight: bolder;
+        transition: color 0.3s ease;
     }
 
     .publication-authors {
         .author-me {
-            color: #000;
+            color: var(--text-color);
             font-weight: 600;
+            transition: color 0.3s ease;
         }
 
         a {
-            color: #000 !important;
+            color: var(--text-color) !important;
+            transition: color 0.3s ease;
         }
 
         a:hover {
@@ -109,8 +227,9 @@
     }
 
     .publication-description {
-        color: #333;
+        color: var(--text-color);
         margin: 0.5em 0;
+        transition: color 0.3s ease;
     }
 
     .publication-links {
@@ -123,14 +242,20 @@
     height: 100%;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     margin-bottom: 1.5rem;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease, border-color 0.3s ease;
     
     &:hover {
         transform: translateY(-2px);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 8px var(--shadow-color);
     }
 
     .card-content {
         padding: 1.5rem;
+        background-color: var(--card-bg);
+        color: var(--text-color);
     }
 
     .post-title {
@@ -281,6 +406,8 @@ html {
         .box {
             padding: 2rem;
             border-radius: 8px;
+            background-color: var(--card-bg);
+            color: var(--text-color);
             
             .title {
                 text-align: center;
@@ -338,85 +465,371 @@ html {
     }
 }
 
-// Highlight card styles
+/* Modal dark theme support */
+.modal .modal-content .box {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+}
+
+.modal .modal-background {
+    background-color: rgba(0, 0, 0, 0.86);
+}
+
+[data-theme="dark"] .modal .modal-background {
+    background-color: rgba(0, 0, 0, 0.92);
+}
+
+/* Post cards dark theme */
+.post-card {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+.post-card .card-content {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+}
+
+.post-card .card-header {
+    background-color: var(--card-bg);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.post-card .card-header-title {
+    color: var(--text-color);
+}
+
+/* Highlights section dark theme */
 .highlight-card {
-    height: 100%;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    margin-bottom: 1.5rem;
-    
-    &:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
 
-    .card-content {
-        padding: 1.5rem;
-    }
+.highlight-card .card-content {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+}
 
-    .highlight-title {
-        margin-bottom: 1rem !important;
-        
-        a {
-            color: #000;
-            text-decoration: none;
-            transition: color 0.3s ease;
-            
-            &:hover {
-                color: rgb(229, 75, 24);
-                text-decoration: none;
-            }
-        }
-    }
+/* Tags dark theme */
+.tag {
+    background-color: var(--button-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
 
-    .highlight-description {
-        color: #333;
-        line-height: 1.6;
-        margin-bottom: 1rem;
-    }
+/* Mobile burger menu dark theme */
+.navbar-burger span {
+    background-color: var(--text-color);
+}
 
-    .highlight-actions {
-        margin-top: 1rem;
-        padding-top: 1rem;
-        border-top: 1px solid #f0f0f0;
-        
-        .button {
-            background-color: #3273dc;
-            border-color: #3273dc;
-            color: white;
-            transition: all 0.3s ease;
-            
-            &:hover {
-                background-color: #2366d1;
-                border-color: #2366d1;
-                transform: translateY(-1px);
-            }
-        }
-    }
+/* Hover effects for dark theme */
+[data-theme="dark"] .post-card:hover {
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
 
-    .highlight-actions-top {
-        margin-top: 0.75rem;
-        margin-bottom: 0;
-        padding-top: 0;
-        border-top: none;
-        
-        .button {
-            background-color: #3273dc;
-            border-color: #3273dc;
-            color: white;
-            transition: all 0.3s ease;
-            font-size: 0.75rem;
-            
-            &:hover {
-                background-color: #2366d1;
-                border-color: #2366d1;
-                transform: translateY(-1px);
-            }
-        }
-    }
+[data-theme="dark"] .publication-image:hover {
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
 
-    .highlight-media {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-    }
+/* Fix dark theme text visibility */
+.title, .title a {
+    color: var(--text-color) !important;
+    transition: color 0.3s ease;
+}
+
+.subtitle {
+    color: var(--text-muted) !important;
+    transition: color 0.3s ease;
+}
+
+/* Hero section text */
+.hero .title {
+    color: var(--text-color) !important;
+}
+
+.hero .content {
+    color: var(--text-color) !important;
+}
+
+.hero .content p {
+    color: var(--text-color) !important;
+}
+
+/* Section headings */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-color) !important;
+    transition: color 0.3s ease;
+}
+
+/* Posts section */
+.post-card .card-header-title {
+    color: var(--text-color) !important;
+}
+
+.post-card .content {
+    color: var(--text-color) !important;
+}
+
+.post-card .content p {
+    color: var(--text-color) !important;
+}
+
+/* Publication section improvements */
+.publication-title a {
+    color: var(--text-color) !important;
+    text-decoration: none;
+}
+
+.publication-title a:hover {
+    color: var(--accent-color) !important;
+    text-decoration: underline;
+}
+
+/* Highlights section */
+.highlight-card .card-header-title {
+    color: var(--text-color) !important;
+}
+
+.highlight-card .content {
+    color: var(--text-color) !important;
+}
+
+.highlight-card .content p {
+    color: var(--text-color) !important;
+}
+
+/* Navbar improvements for dark theme */
+.navbar {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.navbar-item {
+    color: var(--text-color) !important;
+}
+
+.navbar-item:hover {
+    background-color: var(--button-bg) !important;
+    color: var(--text-color) !important;
+}
+
+.navbar-burger span {
+    background-color: var(--text-color) !important;
+}
+
+/* Content paragraphs */
+.content p, .content {
+    color: var(--text-color) !important;
+}
+
+/* Make sure all text is properly colored */
+p, span, div {
+    color: var(--text-color);
+}
+
+/* Override Bulma's default colors */
+.has-text-dark {
+    color: var(--text-color) !important;
+}
+
+.has-text-black {
+    color: var(--text-color) !important;
+}
+
+/* Fix any remaining text visibility issues */
+[data-theme="dark"] .title {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .subtitle {
+    color: #aaaaaa !important;
+}
+
+[data-theme="dark"] h1, 
+[data-theme="dark"] h2, 
+[data-theme="dark"] h3, 
+[data-theme="dark"] h4, 
+[data-theme="dark"] h5, 
+[data-theme="dark"] h6 {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] p {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .content {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .publication-title a {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .publication-venue {
+    color: #aaaaaa !important;
+}
+
+[data-theme="dark"] .publication-description {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .navbar-item {
+    color: #ffffff !important;
+}
+
+/* Social media buttons (GitHub, LinkedIn) dark theme fixes */
+.button.is-light {
+    background-color: var(--button-bg) !important;
+    color: var(--button-text) !important;
+    border: 1px solid var(--border-color) !important;
+    transition: all 0.3s ease;
+}
+
+.button.is-light:hover {
+    background-color: var(--accent-color) !important;
+    color: white !important;
+    border-color: var(--accent-color) !important;
+}
+
+/* External link buttons */
+.external-link.button {
+    background-color: var(--button-bg) !important;
+    color: var(--button-text) !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+.external-link.button:hover {
+    background-color: var(--accent-color) !important;
+    color: white !important;
+    border-color: var(--accent-color) !important;
+}
+
+/* Hyperlink hover effects */
+a:hover {
+    color: var(--accent-color) !important;
+    transition: color 0.3s ease;
+}
+
+/* Publication links hover */
+.publication-title a:hover {
+    color: var(--accent-color) !important;
+    text-decoration: underline;
+}
+
+/* Light theme specific hover effects */
+:root a:hover {
+    color: #e54b18 !important;
+}
+
+/* Dark theme specific hover effects */
+[data-theme="dark"] a:hover {
+    color: #ff6b3d !important;
+}
+
+/* Navigation bar improvements */
+.navbar {
+    background-color: var(--bg-color) !important;
+    border-bottom: 1px solid var(--border-color) !important;
+}
+
+/* Fix navbar transparency issues */
+[data-theme="dark"] .navbar {
+    background-color: #1a1a1a !important;
+    backdrop-filter: none;
+}
+
+/* Social buttons in hero section */
+.hero .buttons .button {
+    background-color: var(--button-bg) !important;
+    color: var(--button-text) !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+.hero .buttons .button:hover {
+    background-color: var(--accent-color) !important;
+    color: white !important;
+    border-color: var(--accent-color) !important;
+    transform: translateY(-1px);
+}
+
+/* Publication links buttons */
+.publication-links .button {
+    background-color: var(--button-bg) !important;
+    color: var(--button-text) !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+.publication-links .button:hover {
+    background-color: var(--accent-color) !important;
+    color: white !important;
+    border-color: var(--accent-color) !important;
+}
+
+/* Navbar item hover improvements */
+.navbar-item:hover {
+    background-color: var(--button-bg) !important;
+    color: var(--text-color) !important;
+    border-radius: 4px;
+}
+
+/* Theme toggle button styling */
+.theme-toggle:hover {
+    background-color: var(--button-bg) !important;
+    color: var(--accent-color) !important;
+}
+
+/* Footer dark theme fixes */
+.footer {
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.footer .footer-links a {
+    color: var(--text-color) !important;
+    transition: color 0.3s ease;
+}
+
+.footer .footer-links a:hover {
+    color: var(--accent-color) !important;
+}
+
+[data-theme="dark"] .footer {
+    background-color: #1a1a1a !important;
+    color: #ffffff !important;
+}
+
+/* Publication button spacing */
+.publication-links .button {
+    margin-right: 0.5rem !important;
+    margin-bottom: 0.25rem !important;
+}
+
+.publication-links .button:last-child {
+    margin-right: 0 !important;
+}
+
+/* Ensure publication links have proper spacing */
+.publication-links.buttons.field.has-addons {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.publication-links.buttons.field.has-addons .button {
+    margin-right: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/* Remove has-addons styling for better spacing */
+.publication-links.buttons:not(.has-addons) .button {
+    margin-right: 0.5rem;
+    margin-bottom: 0.25rem;
 }
