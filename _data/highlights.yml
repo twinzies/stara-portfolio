@@ -3,7 +3,7 @@
   title: 'Sycophancy or Empathy ? “Deep Reflect”: A system design to analyze and generate responses to personal queries'
   organization: "Masters in AI [in-progress]"
   date: "September 2025"
-  description: "This study analyzes and compared AI generated responses to human personal queries. The study investigates two major themes in NLP research - where LLM responses are perceived to be more empathic and also, under some paradigms more sycophantic in their responses to personal questions. Deep Reflect is an extensible framework designed for the project and investigations."
+  description: "This research project analyzes and compares AI-generated responses with human answers to personal queries. It focuses on two major themes in NLP: LLM responses are often perceived as more empathic yet also more sycophantic than those of humans. The project introduces Deep Reflect, a flexible framework built for this study, adaptable to broader use cases, and supporting a new chain-of-thought approach for mitigating such tendencies in LLM outputs."
   image: "pipeline_dr.jpg"
   url: "https://prezi.com/view/AdHeVsU0grSjrdzvHnkg/?referral_token=cBiDd9lnB3FN"
   # image: "diss.png"
