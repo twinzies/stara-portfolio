@@ -1,26 +1,3 @@
-- id: diss
-#  survey_url: "https://forms.gle/vKUj8oRHgGdVaDfs9"
-  title: 'Sycophancy or Empathy ? “Deep Reflect”: A system design to analyze and generate responses to personal queries'
-  organization: "Masters in AI [in-progress]"
-  date: "September 2025"
-  description: "This research project analyzes and compares AI-generated responses with human answers to personal queries. It focuses on two major themes in NLP: LLM responses are often perceived as more empathic yet also more sycophantic than those of humans. The project introduces Deep Reflect, a flexible framework built for this study, adaptable to broader use cases, and supporting a new chain-of-thought approach for mitigating such tendencies in LLM outputs."
-  image: "pipeline_dr.jpg"
-  url: "https://prezi.com/view/AdHeVsU0grSjrdzvHnkg/?referral_token=cBiDd9lnB3FN"
-  # image: "diss.png"
-
-# - id: google-3d-shopping-may2025
-#   title: "Generating 3D Products"
-#   organization: "Google Research"
-#   date: "May 2025"
-#   description: "Transform a few photos into interactive 3D shopping experiences using generative AI."
-#   url: "https://research.google/blog/bringing-3d-shoppable-products-online-with-generative-ai/"
-#   image: "google-3d-shopping.jpg"
-#   video: "loon.mov"
-#   tags:
-#     - "Generative AI"
-#     - "3D Reconstruction"
-#     - "Computer Vision"
-
 - id: google-loon-2019
   title: "Modeling Winds for Loon"
   organization: "GoogleX"
@@ -32,3 +9,23 @@
     - "Statistical Modeling"
     - "Dynamical Systems"
   #  - "Computer Vision"
+
+- id: diss
+#  survey_url: "https://forms.gle/vKUj8oRHgGdVaDfs9"
+  title: 'Sycophancy or Empathy ? “Deep Reflect”: A system design to analyze and generate responses to personal queries'
+  organization: "Masters in AI [in-progress]"
+  date: "September 2025"
+  description: "This research project analyzes and compares AI-generated responses with human answers to personal queries. It focuses on two major themes in NLP: LLM responses are often perceived as more empathic yet also more sycophantic than those of humans. The project introduces Deep Reflect, a flexible framework built for this study, adaptable to broader use cases, and supporting a new chain-of-thought approach for mitigating such tendencies in LLM outputs."
+  image: "pipeline_dr.jpg"
+  url: "https://prezi.com/view/AdHeVsU0grSjrdzvHnkg/?referral_token=cBiDd9lnB3FN"
+  # image: "diss.png"
+
+- id: zero
+  title: "Zero - AI assistants that align with you."
+  description: "Zero is an AI assistant platform that adapts the assistant to user preferences. I co-created this app with a classmate - Waris - to let users define the type of assistant they need. The controls are customized based on individual usage patterns."
+  url: "https://blue-river-00ab56d03.2.azurestaticapps.net/"
+  image: "zero.png"
+  tags:
+    - "AI assistants"
+    - "NLP"
+  #  - "LLMs"
