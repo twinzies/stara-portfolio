@@ -40,7 +40,11 @@ function showImageOfDay() {
         { src: './images/image-of-day/12.jpg', caption: 'Image 12' },
         { src: './images/image-of-day/13.jpg', caption: 'Image 13' },
         { src: './images/image-of-day/14.jpg', caption: 'Image 14' },
-        { src: './images/image-of-day/15.jpg', caption: 'Image 15' }
+        { src: './images/image-of-day/15.jpg', caption: 'Image 15' },
+        { src: './images/image-of-day/16.jpg', caption: 'Image 16' },
+        { src: './images/image-of-day/17.jpg', caption: 'Image 17' },
+        { src: './images/image-of-day/18.jpg', caption: 'Image 18' },
+        { src: './images/image-of-day/19.jpg', caption: 'Image 19' }
     ];
     
     // Get today's date and use it to select an image

@@ -7,6 +7,9 @@ _site/
 .bundle/
 vendor/
 
+# Custom ignores
+untracked/
+
 *~
 *.so
 .DS_Store
