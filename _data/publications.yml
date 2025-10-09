@@ -1,7 +1,7 @@
 # TODO
 - id: multilinguality
   title: "Linguistic and Cultural Bias Analysis in Large Language Models"
-  description: 'This project explores how linguistic and cultural biases present in training corpora shape transformer-based LLMs default "values" during inference. By examining the influence of pre-training biases, we investigate how models might reflect or reinforce cultural norms without deliberate intent. The study illuminates hidden priors embedded in language models and their implications for fair representation and multicultural inclusivity in AI systems.'
+  description: 'This project explores the extent to which linguistic and cultural biases present in training corpora and preference dataset shape LLM responses during inference. By examining the influence of individual pre and post-training datasets, we investigate whether models reflect or reinforce cultural norms without deliberate intent.'
   image: devnagri2.png
   image_mouseover: devnagrivid.mp4
   technologies:
@@ -17,7 +17,7 @@
 
 - id: compuvision # The paramount job - need not mention the company
   title: "Automating defect detection for cable manufacturing with Deep Learning"
-  description: "Designed and trained novel convolutional neural networks (CNNs) using PyTorch for object detection and defect classification in cables. Focused on model accuracy, real-time inference, and error detection. Applied deep learning to automate visual inspection and improve quality control."
+  description: "Designed and trained novel convolutional neural networks (CNNs) using PyTorch for object detection and defect classification in cables. Focused on model accuracy, feature maps, and error detection. Applied deep learning to automate visual inspection and improve quality control."
   # project_page: 
   image: compuvision.png
   image_mouseover: compuvision.mp4
@@ -26,7 +26,7 @@
 - id: gcp
   title: "Technical infrastructure for billing enterprise Cloud customers at scale as part of GCP"
   venue: Google
-  description: "A robust subscription management system for GCP services built with a gRPC/Protobuf based architecture. This project included integrations with external vendors to fulfill custom cloud infrastructure requirements for enterprise clients, providing scalable billing solutions that significantly enhanced internal service reliability improving the customer experience."
+  description: "A robust subscription management system for GCP services built with gRPCs and protobufs. This project included liasing with external vendors to fulfill custom Google cloud infrastructure requirements for enterprise clients - providing scalable billing solutions for a seamless customer experience."
   image: cloud.png
   project_page: https://cloud.google.com/compute/docs/instances/bare-metal-instances
   launch_video: https://www.youtube.com/watch?v=Ad49t21gTfw
@@ -40,7 +40,7 @@
 - id: pixelphone
   title: "eVNA API Development & Data-Driven Optimizations as part of the Pixel Phones Team"
   venue: Google
-  description: "The work on the Pixel Phones team involved design and implementation of a novel 'eVNA' API in collaboration with industry partners such as STMicroelectronics and National Instruments. Analysis of data informed design optimizations and product development, ultimately enhancing connectivity and user experience for millions of Pixel phone users worldwide. The API has been included in all Pixel phones produced since its inception."
+  description: "The work on the Pixel Phones team involved design and implementation of a novel 'eVNA' API in collaboration with industry partners such as STMicroelectronics and National Instruments. Analysis of data informed optimizations in the consumer hardware manufacturing pipelines to enhance product development. The API has been included in all Pixel phones produced since its inception enhancing connectivity and the consumer hardware experience for millions of Pixel phone users worldwide to date. "
   project_page: https://store.google.com/product/pixel_8
   image: phone.jpeg
   launch_video: https://www.youtube.com/watch?v=4dJ89x4SVxk
@@ -54,7 +54,7 @@
 - id: pixelbuds
   title: "Calibration Algorithms & Manufacturing Data Analytics as part of Pixel buds"
   venue: Google
-  description: "The Pixel Buds project required implementation of complex calibration algorithms for critical technologies such as Bluetooth, where code must ensure performance and compliance with requirements that vary by country and region. Analyzing large-scale datasets proved crucial for improving product quality throughout its development."
+  description: "The Pixel Buds project required implementation of complex calibration algorithms for user-critical technologies such as Bluetooth LE and IoT (Zigbee). The codebase was designed to ensure performance and compliance with requirements that vary by country and region. Analyzing large-scale datasets proved crucial for improving product quality throughout the product development. I worked on the core team throughout the product lifecycle from initial design to launch."
   project_page: https://www.soundguys.com/google-pixel-buds-a-series-review-54174/
   launch_video: https://www.youtube.com/watch?v=I6r4y17bV8g&list=PLnKtcw5mIGUSovjTwkvQh31Z-9PkUL5Ly&index=3
   image: buds.png
@@ -69,7 +69,7 @@
 - id: mesosphericna
   title: "Deep atmospheric analysis of Mesospheric Na Variability and its dependence on Geomagnetic and Solar Activity"
   venue: Presented at American Geophysical Union, USA
-  description: "This research presented at the American Geophysical Union utilized advanced resonance lidar systems at the Arecibo Observatory to analyze mesospheric sodium (Na) variability and its correlation with geomagnetic and solar activity. The data and models provided significant insights into seasonal and aperiodic variations in atmospheric composition."
+  description: "This research presented at the American Geophysical Union utilized advanced resonance lidar systems at the Arecibo Observatory to analyze mesospheric sodium (Na) variability and its correlations with geomagnetic activity and solar flux. The data and models provided insights into seasonal and aperiodic variations in atmospheric composition."
   project_page: https://ui.adsabs.harvard.edu/abs/2017AGUFMSA11A2247J/abstract
   paper_url: https://agu.confex.com/agu/fm17/meetingapp.cgi/Paper/220704
   image: me_arecibo.png
@@ -84,7 +84,7 @@
 - id: hfarecibo
   title: "High-Frequency data collection and analysis of the E region of the Ionosphere with the world's most powerful radar at Arecibo Observatory"
   venue: Presented at American Geophysical Union, USA
-  description: "This project used radar data observed at the Arecibo Observatory to model how powerful radio signals can change the ionosphere, the research revealed new insights into the ionosphere and its behavior."
+  description: "This project used radar data observed at the Arecibo Observatory to model how powerful radio signals (Incoherent Scatter Radar) can change the ionosphere, the research revealed new insights into the ionosphere and its behavior."
   project_page: https://ui.adsabs.harvard.edu/abs/2017AGUFMSM23B2611N/abstract
   paper_url: https://agu.confex.com/agu/fm17/meetingapp.cgi/Paper/209671
   image: arecibo2.png
@@ -95,7 +95,7 @@
       - mpsulzer
       - pperillat
   awards:
-    - "Max Hammond Grant for Outstanding Research in the Space Sciences"
+    - "Carl 'Max' Hammond Grant for Outstanding Research in Space Physics"
 # - id: landsdao
 #   title: "nSqft and Polkadot"
 #   venue: Corpus Christi College, University of Cambridge, UK
