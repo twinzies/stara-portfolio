@@ -86,7 +86,7 @@ button { font: inherit; color: inherit; cursor: pointer; background: none; borde
 }
 
 /* Interactive sky (js/sky.js) fades in over the static photo once ready */
-#sky {
+#sky, .sky-layer {
   position: fixed;
   inset: 0;
   z-index: -1;
@@ -96,7 +96,7 @@ button { font: inherit; color: inherit; cursor: pointer; background: none; borde
   transition: opacity 1.2s ease;
   pointer-events: none;
 }
-#sky.is-ready { opacity: 1; }
+#sky.is-ready, .sky-layer.is-ready { opacity: 1; }
 
 /* Theme-aware tint above both the photo and the canvas */
 .stage::before {
