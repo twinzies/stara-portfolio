@@ -1,7 +1,5 @@
 # Numbers shown in the hero card on the home page. Edit freely.
 - value: "2"
-  label: B.S. degrees
-- value: "2"
   label: AGU talks
 - value: "2"
   label: Research awards

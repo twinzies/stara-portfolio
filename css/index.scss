@@ -241,12 +241,34 @@ button { font: inherit; color: inherit; cursor: pointer; background: none; borde
 .hero-sub a { text-decoration: none; border-bottom: 1px solid currentColor; }
 .hero-sub a:hover { color: var(--accent-strong); }
 
+/* Second line under the role reads as supporting detail */
+.hero-sub + .hero-sub { font-weight: 400; color: var(--ink-muted); }
+.hero-sub + .hero-sub a { color: var(--ink); }
+
+/* The headline: the one sentence people should remember */
 .hero-tagline {
-  margin: 16px 0 18px;
-  font-size: 15px;
-  line-height: 1.6;
+  max-width: 46ch;
+  margin: 18px auto 12px;
+  font-size: clamp(16px, 2.1vw, 18px);
+  line-height: 1.55;
+  color: var(--ink);
+}
+
+/* Credentials: small, dot-separated */
+.hero-creds {
+  list-style: none;
+  margin: 0 0 22px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px 0;
+  font-size: 14px;
   color: var(--ink-muted);
 }
+.hero-creds li + li::before { content: "·"; margin: 0 10px; opacity: .7; }
+.hero-creds a { color: var(--ink); text-decoration: none; border-bottom: 1px solid currentColor; }
+.hero-creds a:hover { color: var(--accent-strong); }
 .hero-tagline a { color: var(--ink); text-decoration: none; border-bottom: 1px solid currentColor; }
 .hero-tagline a:hover { color: var(--accent-strong); }
 
