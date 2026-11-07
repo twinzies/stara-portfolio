@@ -103,8 +103,9 @@ layout: null
   </main>
 
   <!-- Bottom bar -->
-  {% assign latest = site.data.highlights[1] %}
-  <a class="latest-pill" href="{{ latest.url }}" target="_blank" rel="noopener">
+  {% assign latest = site.data.highlights[0] %}
+  {% if latest.url contains '://' %}{% assign latest_href = latest.url %}{% assign latest_ext = true %}{% else %}{% assign latest_href = latest.url | relative_url %}{% assign latest_ext = false %}{% endif %}
+  <a class="latest-pill" href="{{ latest_href }}"{% if latest_ext %} target="_blank" rel="noopener"{% endif %}>
     <span class="latest-badge">Latest</span>
     <span class="latest-title">{{ latest.title | truncate: 46 }}</span>
     <i class="fas fa-arrow-right"></i>
@@ -140,8 +141,9 @@ layout: null
 
       <div class="card-grid">
         {% for highlight in site.data.highlights %}
+        {% if highlight.url contains '://' %}{% assign href = highlight.url %}{% capture target %} target="_blank" rel="noopener"{% endcapture %}{% else %}{% assign href = highlight.url | relative_url %}{% assign target = '' %}{% endif %}
         <article class="card">
-          <a class="card-media" href="{{ highlight.url }}" target="_blank" rel="noopener">
+          <a class="card-media" href="{{ href }}"{{ target }}>
             {% if highlight.video %}
             <video autoplay loop muted playsinline poster="{{ '/images/' | append: highlight.image | relative_url }}">
               <source src="{{ '/images/' | append: highlight.video | relative_url }}" type="video/mp4">
@@ -152,7 +154,7 @@ layout: null
           </a>
           <div class="card-body">
             {% if highlight.organization %}<span class="eyebrow">{{ highlight.organization }}</span>{% endif %}
-            <h3 class="card-title"><a href="{{ highlight.url }}" target="_blank" rel="noopener">{{ highlight.title }}</a></h3>
+            <h3 class="card-title"><a href="{{ href }}"{{ target }}>{{ highlight.title }}</a></h3>
             <p>{{ highlight.description }}</p>
             {% if highlight.tags %}
             <div class="tags">{% for tag in highlight.tags %}<span class="tag">{{ tag }}</span>{% endfor %}</div>

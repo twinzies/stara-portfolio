@@ -1,0 +1,188 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zane | {{ site.name }}</title>
+  <meta name="description" content="Zane is an open-source legal AI platform for document review, drafting and research, built to widen access to justice in England.">
+
+  <script>
+    try { var t = localStorage.getItem('theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="{{ '/css/index.css' | relative_url }}" rel="stylesheet">
+  <script defer src="{{ '/js/fontawesome.all.min.js' | relative_url }}"></script>
+</head>
+
+<body class="project-page">
+
+  <header class="project-top">
+    <a class="project-back" href="{{ '/#projects' | relative_url }}"><i class="fas fa-arrow-left"></i> {{ site.name }}</a>
+    <button class="theme-toggle" aria-label="Toggle light and dark theme" title="Toggle theme">
+      <i class="fas fa-sun icon-sun"></i><i class="fas fa-moon icon-moon"></i>
+    </button>
+  </header>
+
+  <main class="project">
+
+    <section class="project-intro">
+      <span class="eyebrow">Open-source legal AI · 2026</span>
+      <h1 class="project-title">Zane</h1>
+      <p class="project-lede">
+        An open-source legal AI platform for document review, drafting and legal research.
+        I am building it because most people in England who face a legal problem never get
+        to speak to a lawyer.
+      </p>
+      <div class="project-actions">
+        <a class="btn-outline" href="https://github.com/twinzies/Zane"><i class="fab fa-github"></i> View on GitHub</a>
+      </div>
+    </section>
+
+    <figure class="shot shot-hero">
+      <img src="{{ '/images/zane/home.jpg' | relative_url }}" alt="Zane assistant home screen with projects, library, tabular review and workflows">
+    </figure>
+
+    <section class="project-section">
+      <h2>Why access to justice in England</h2>
+      <p>
+        The law only protects people who can use it. In England, a growing number of people
+        cannot. Legal advice is expensive, and for most everyday problems there is no longer
+        any public help to pay for it.
+      </p>
+      <ul class="facts">
+        <li>
+          <strong>Legal aid has shrunk.</strong>
+          Since the Legal Aid, Sentencing and Punishment of Offenders Act 2012 (LASPO),
+          civil legal aid no longer covers most private family, employment, debt and welfare
+          benefits cases. These are the problems that shape ordinary lives: a separation, a
+          dismissal, an eviction notice, a benefits decision.
+        </li>
+        <li>
+          <strong>More people face court alone.</strong>
+          Many people now represent themselves as litigants in person, especially in the family
+          courts. They are expected to follow the same procedural rules as trained lawyers, often
+          against an opponent who has one.
+        </li>
+        <li>
+          <strong>Help is hard to find even where it exists.</strong>
+          The number of firms doing legal aid work has fallen, leaving parts of the country
+          the Law Society calls &ldquo;legal aid deserts&rdquo;, with little or no local
+          provision for problems such as housing.
+        </li>
+        <li>
+          <strong>The new tools are aimed at the top of the market.</strong>
+          Legal AI is advancing quickly, but most of it is sold as closed, expensive software
+          to large commercial firms. The people with the least access to lawyers are the
+          least likely to benefit.
+        </li>
+      </ul>
+      <p>
+        Zane is my attempt to close part of that gap: a capable legal assistant that anyone can
+        inspect, run and improve, and that law centres, advice charities, small firms and
+        individuals can afford, because it is free.
+      </p>
+    </section>
+
+    <figure class="shot">
+      <img src="{{ '/images/zane/research.jpg' | relative_url }}" alt="Zane answering a question about without prejudice save as to costs offers, citing English authorities" loading="lazy">
+      <figcaption>Zane answering a question on English civil procedure, citing the authorities it relies on.</figcaption>
+    </figure>
+
+    <section class="project-section">
+      <h2>What Zane does</h2>
+      <div class="feature-grid">
+        <div class="feature">
+          <i class="fas fa-file-alt"></i>
+          <h3>Review and draft</h3>
+          <p>Chat with documents and open matters, review documents and apply suggested edits.</p>
+        </div>
+        <div class="feature">
+          <i class="fas fa-balance-scale"></i>
+          <h3>Research with citations</h3>
+          <p>Ask legal questions, follow the assistant&rsquo;s reasoning and verify the citations it gives.</p>
+        </div>
+        <div class="feature">
+          <i class="fas fa-table"></i>
+          <h3>Tabular review</h3>
+          <p>Extract structured answers across many documents at once, with the language model of your choice.</p>
+        </div>
+        <div class="feature">
+          <i class="fas fa-project-diagram"></i>
+          <h3>Reusable workflows</h3>
+          <p>Run repeatable assistant and review workflows, and organise projects, folders and a document library.</p>
+        </div>
+        <div class="feature">
+          <i class="fab fa-microsoft"></i>
+          <h3>Works in Word</h3>
+          <p>Use Zane from Microsoft Word through a task-pane add-in (beta).</p>
+        </div>
+        <div class="feature">
+          <i class="fas fa-lock"></i>
+          <h3>Private by design</h3>
+          <p>Run supported models locally through Ollama, so sensitive client documents need not leave your machine.</p>
+        </div>
+      </div>
+    </section>
+
+    <figure class="shot">
+      <img src="{{ '/images/zane/tabular-review-models.jpg' | relative_url }}" alt="Choosing a language model for a new tabular review in Zane" loading="lazy">
+      <figcaption>Choosing a model for a new tabular review.</figcaption>
+    </figure>
+
+    <section class="project-section">
+      <h2>Why open source</h2>
+      <p>
+        Trust matters more in law than almost anywhere else. If a tool is going to help someone
+        understand their rights, they and their adviser should be able to see how it works.
+      </p>
+      <ul class="facts">
+        <li><strong>Free to use and self-host.</strong> One Docker Compose command runs the whole stack, so a law centre or charity can host its own copy.</li>
+        <li><strong>Any model, including local ones.</strong> Use Anthropic, Gemini or OpenAI models, or run models locally with Ollama.</li>
+        <li><strong>Built in the open.</strong> Zane builds on Mike OSS and is licensed under the GNU AGPL v3, so improvements stay open for everyone.</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>What&rsquo;s next</h2>
+      <p>
+        Zane&rsquo;s built-in case-law search currently uses CourtListener, which covers US law.
+        The next step is to connect it to free public sources for the law of England and Wales,
+        such as <a href="https://www.legislation.gov.uk/">legislation.gov.uk</a> and the National
+        Archives&rsquo; <a href="https://caselaw.nationalarchives.gov.uk/">Find Case Law</a> service,
+        so that its answers rest on the law that actually applies.
+      </p>
+    </section>
+
+    <section class="project-cta">
+      <h2>Get involved</h2>
+      <p>Zane is open to contributors, testers and organisations working on access to justice.</p>
+      <div class="project-actions">
+        <a class="btn-outline" href="https://github.com/twinzies/Zane"><i class="fab fa-github"></i> Contribute on GitHub</a>
+        <a class="btn-outline" href="https://linkedin.com/in/{{ site.linkedin_username }}"><i class="fab fa-linkedin"></i> Get in touch</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="project-footer">
+    <a href="{{ '/' | relative_url }}">{{ site.name }}</a> · {{ 'now' | date: '%Y' }}
+  </footer>
+
+  <script>
+    document.querySelector('.theme-toggle').addEventListener('click', function () {
+      var root = document.documentElement;
+      var next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
+    });
+  </script>
+</body>
+
+</html>

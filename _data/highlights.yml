@@ -1,3 +1,14 @@
+- id: zane
+  title: "Zane - open-source legal AI for access to justice"
+  organization: "Open source · 2026"
+  description: "An open-source legal AI platform for document review, drafting and legal research, built so that people in England who cannot afford a lawyer, and the advisers who help them, have capable tools too."
+  url: "/zane/"
+  image: "zane/home.jpg"
+  tags:
+    - "Legal AI"
+    - "Access to justice"
+    - "Open source"
+
 - id: google-loon-2019
   title: "Modeling Winds for Loon"
   organization: "GoogleX"
