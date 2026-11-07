@@ -1,94 +1,70 @@
-$(document).ready(function() {
-    // Publication hover effects
-    $('.publication-mousecell').mouseover(function() {
-        $(this).find('video').css('display', 'inline-block');
-        $(this).find('img').css('display', 'none');
-    });
-    $('.publication-mousecell').mouseout(function() {
-        $(this).find('video').css('display', 'none');
-        $(this).find('img').css('display', 'inline-block');
-    });
+(function () {
+  const root = document.documentElement;
+  const panels = document.querySelectorAll('.panel');
+  const navPill = document.getElementById('nav');
+  const burger = document.querySelector('.nav-burger');
 
-    // Simple mobile navbar toggle
-    $('.navbar-burger').click(function() {
-        $('.navbar-burger').toggleClass('is-active');
-        $('.navbar-menu').toggleClass('is-active');
+  // ---------- Panels (hash-routed: #about, #projects, ...) ----------
+  function openPanel(name) {
+    let opened = false;
+    panels.forEach(function (p) {
+      const match = p.dataset.panel === name;
+      p.classList.toggle('is-open', match);
+      p.setAttribute('aria-hidden', match ? 'false' : 'true');
+      if (match) { p.scrollTop = 0; opened = true; }
     });
-
-    // Close mobile menu when clicking on a link
-    $('.navbar-item').click(function() {
-        $('.navbar-burger').removeClass('is-active');
-        $('.navbar-menu').removeClass('is-active');
+    document.body.classList.toggle('panel-open', opened);
+    document.querySelectorAll('.nav-links a').forEach(function (a) {
+      a.classList.toggle('is-active', a.getAttribute('href') === '#' + name);
     });
-})
+    if (name === 'photo') loadPhoto();
+  }
 
-// Image of the Day functionality
-function showImageOfDay() {
-    // Array of images from the image-of-day folder
-    const images = [
-        { src: './images/image-of-day/1.jpg', caption: 'Image 1' },
-        { src: './images/image-of-day/2.jpg', caption: 'Image 2' },
-        { src: './images/image-of-day/3.jpg', caption: 'Image 3' },
-        { src: './images/image-of-day/4.jpg', caption: 'Image 4' },
-        { src: './images/image-of-day/5.jpg', caption: 'Image 5' },
-        { src: './images/image-of-day/6.jpg', caption: 'Image 6' },
-        { src: './images/image-of-day/7.jpg', caption: 'Image 7' },
-        { src: './images/image-of-day/8.jpg', caption: 'Image 8' },
-        { src: './images/image-of-day/9.jpg', caption: 'Image 9' },
-        { src: './images/image-of-day/10.jpg', caption: 'Image 10' },
-        { src: './images/image-of-day/11.jpg', caption: 'Image 11' },
-        { src: './images/image-of-day/12.jpg', caption: 'Image 12' },
-        { src: './images/image-of-day/13.jpg', caption: 'Image 13' },
-        { src: './images/image-of-day/14.jpg', caption: 'Image 14' },
-        { src: './images/image-of-day/15.jpg', caption: 'Image 15' },
-        { src: './images/image-of-day/16.jpg', caption: 'Image 16' },
-        { src: './images/image-of-day/17.jpg', caption: 'Image 17' },
-        { src: './images/image-of-day/18.jpg', caption: 'Image 18' },
-        { src: './images/image-of-day/19.jpg', caption: 'Image 19' }
-    ];
-    
-    // Get today's date and use it to select an image
-    const today = new Date();
-    const dayOfYear = Math.floor((today - new Date(today.getFullYear(), 0, 0)) / (1000 * 60 * 60 * 24));
-    const imageIndex = dayOfYear % images.length;
-    const todaysImage = images[imageIndex];
-    
-    // Add some debugging
-    console.log('Day of year:', dayOfYear);
-    console.log('Image index:', imageIndex);
-    console.log('Selected image:', todaysImage);
-    
-    // Create modal HTML
-    const modalHTML = `
-        <div class="modal is-active" id="imageOfDayModal">
-            <div class="modal-background" onclick="closeImageOfDay()"></div>
-            <div class="modal-content">
-                <div class="box">
-                    <h3 class="title is-4">Image of the Day</h3>
-                    <p class="has-text-centered mb-3">Day ${dayOfYear} of ${new Date().getFullYear()}</p>
-                    <figure class="image">
-                        <img src="${todaysImage.src}" 
-                             alt="${todaysImage.caption}" 
-                             style="max-height: 70vh; object-fit: contain; width: 100%;"
-                             onload="console.log('Image loaded successfully')"
-                             onerror="console.error('Failed to load image:', this.src); this.style.display='none'; this.parentNode.innerHTML='<p>Image not found</p>';">
-                    </figure>
-                    <p class="has-text-centered mt-3" style="font-style: italic; font-size: 0.875rem; color: #666;">
-                        © Tara K. Jain 2025. All rights reserved. Use for AI/ML training prohibited.
-                    </p>
-                </div>
-            </div>
-            <button class="modal-close is-large" onclick="closeImageOfDay()"></button>
-        </div>
-    `;
-    
-    // Add modal to page
-    document.body.insertAdjacentHTML('beforeend', modalHTML);
-}
+  function route() {
+    openPanel(location.hash.replace('#', ''));
+    navPill.classList.remove('is-open');
+    burger.setAttribute('aria-expanded', 'false');
+  }
 
-function closeImageOfDay() {
-    const modal = document.getElementById('imageOfDayModal');
-    if (modal) {
-        modal.remove();
-    }
-}
+  function closePanels() {
+    if (location.hash) history.pushState('', document.title, location.pathname + location.search);
+    openPanel('');
+  }
+
+  window.addEventListener('hashchange', route);
+  document.querySelectorAll('.panel-close').forEach(function (b) { b.addEventListener('click', closePanels); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closePanels(); });
+  route();
+
+  // ---------- Mobile nav ----------
+  burger.addEventListener('click', function () {
+    const open = navPill.classList.toggle('is-open');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+
+  // ---------- Theme toggle ----------
+  document.querySelector('.theme-toggle').addEventListener('click', function () {
+    const next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch (e) {}
+  });
+
+  // ---------- Photo of the day ----------
+  const PHOTO_COUNT = 19; // images/image-of-day/1.jpg ... 19.jpg
+  const img = document.getElementById('photo-img');
+  const caption = document.getElementById('photo-caption');
+  const today = new Date();
+  const dayOfYear = Math.floor((today - new Date(today.getFullYear(), 0, 0)) / 86400000);
+  let offset = 0;
+
+  function loadPhoto() {
+    const index = (((dayOfYear + offset) % PHOTO_COUNT) + PHOTO_COUNT) % PHOTO_COUNT;
+    img.src = 'images/image-of-day/' + (index + 1) + '.jpg';
+    caption.textContent = offset === 0
+      ? 'Day ' + dayOfYear + ' of ' + today.getFullYear() + '. A new photograph each day.'
+      : 'Photo ' + (index + 1) + ' of ' + PHOTO_COUNT + '.';
+  }
+
+  document.getElementById('photo-prev').addEventListener('click', function () { offset--; loadPhoto(); });
+  document.getElementById('photo-next').addEventListener('click', function () { offset++; loadPhoto(); });
+})();
