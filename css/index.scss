@@ -188,11 +188,12 @@ button { font: inherit; color: inherit; cursor: pointer; background: none; borde
 .yolk {
   position: fixed;
   z-index: 60;
-  width: 26px; height: 26px;
-  margin: -13px 0 0 -13px;
-  border-radius: 50% 50% 50% 50% / 58% 58% 42% 42%;
-  background: radial-gradient(circle at 35% 30%, #ffe27a 0 18%, #ffb31a 55%, #e88a00 100%);
-  box-shadow: 0 0 0 5px rgba(255, 255, 255, .85), 0 6px 18px rgba(0, 0, 0, .35);
+  /* A whole brown egg; the yolk only appears when it splats */
+  width: 28px; height: 36px;
+  margin: -18px 0 0 -14px;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  background: radial-gradient(ellipse at 35% 28%, #e6b88a 0 12%, #c08552 45%, #8e5a32 100%);
+  box-shadow: inset -3px -4px 6px rgba(60, 30, 10, .35), 0 6px 18px rgba(0, 0, 0, .35);
   pointer-events: none;
   transform-origin: 50% 100%;
 }

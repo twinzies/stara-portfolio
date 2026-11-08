@@ -75,8 +75,8 @@
     yolk.style.top = y + 'px';
     document.body.appendChild(yolk);
 
-    const drop = window.innerHeight - y - 14;
-    const fallMs = Math.max(500, Math.sqrt(drop) * 38); // longer drop takes longer, like gravity
+    const drop = window.innerHeight - y - 18;
+    const fallMs = Math.max(650, Math.sqrt(drop) * 50); // longer drop takes longer, like gravity
     yolk.animate([
       { transform: 'translateY(0) scale(.4)', offset: 0 },
       { transform: 'translateY(6px) scale(1, 1.15)', offset: 0.12 },
@@ -104,7 +104,7 @@
     splat.appendChild(canvas);
     document.body.appendChild(splat);
 
-    // Paint the slime (a canvas, so the cursor can wipe holes in it)
+    // Paint the slime
     const w = window.innerWidth, h = window.innerHeight;
     const dpr = window.devicePixelRatio || 1;
     canvas.width = w * dpr; canvas.height = h * dpr;
@@ -131,26 +131,6 @@
     g.addColorStop(0, 'rgba(255,255,255,.28)'); g.addColorStop(0.35, 'rgba(255,255,255,0)');
     g.addColorStop(0.7, 'rgba(255,255,255,0)'); g.addColorStop(1, 'rgba(255,255,255,.12)');
     ctx.fillStyle = g; ctx.fillRect(0, 0, w, h);
-
-    // Wiper: moving the pointer over the slime clears a soft-edged swath
-    ctx.globalCompositeOperation = 'destination-out';
-    ctx.lineCap = 'round'; ctx.lineJoin = 'round';
-    ctx.lineWidth = 63;
-    ctx.strokeStyle = ctx.fillStyle = '#000';
-    ctx.shadowColor = '#000'; ctx.shadowBlur = 17;
-    let last = null;
-    function wipe(e) {
-      const r = canvas.getBoundingClientRect(); // follows the suck-in scale
-      if (!r.width) return;
-      const p = { x: (e.clientX - r.left) * (w / r.width), y: (e.clientY - r.top) * (h / r.height) };
-      ctx.beginPath();
-      if (last) { ctx.moveTo(last.x, last.y); ctx.lineTo(p.x, p.y); ctx.stroke(); }
-      else { ctx.arc(p.x, p.y, 32, 0, Math.PI * 2); ctx.fill(); }
-      last = p;
-    }
-    function stopWipe() { last = null; }
-    window.addEventListener('pointermove', wipe);
-    document.addEventListener('pointerleave', stopWipe);
 
     const at = ' at ' + x + 'px ' + y + 'px)';
     const reach = Math.hypot(Math.max(x, window.innerWidth - x), y) + 40;
@@ -199,8 +179,6 @@
       })();
 
       suck.onfinish = function () {
-        window.removeEventListener('pointermove', wipe);
-        document.removeEventListener('pointerleave', stopWipe);
         splat.remove();
       };
     };
